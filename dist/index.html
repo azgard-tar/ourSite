@@ -5,15 +5,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our site</title>
+  <style>
+    :root {
+      --rule: (
+        --width: 1280;
+        --height: 961;
+        --n: 30;
+        :doodle {
+          --s: 0;
+          grid-gap: 1px;
+          @grid: 30 / 1280px 961px;
+        }
+        :doodle(:hover) {
+          --s: 2;
+        }
+        transition: .5s cubic-bezier(.175, .885, .32, 1.275);
+        transition-delay: @rand(500ms);
+        transform: translateX(calc(@var(--s) * 100%)) translateY(calc(@var(--s) * 100%));
+        background-image: url(./img/ourPhoto.jpg);
+        background-position: calc((@x - 1) * @var(--width)/@var(--n) * -1 * 1px) calc((@y - 1) * @var(--height)/@var(--n) * -1 * 1px);
+        background-size: calc(@var(--width) * 1px) calc(@var(--height) * 1px);
+        
+        background-repeat: no-repeat;
+      )
+    }
+  </style>
 </head>
 <body>
-  <css-doodle grid="5">
-    :doodle {
-      grid-gap: 1px;
-      width: 8em; height: 8em;
-    }
-    background: #60569e;
-  </css-doodle>
+  <css-doodle use="var(--rule)"></css-doodle>
   <script src="app.js"></script>
 </body>
 </html>
