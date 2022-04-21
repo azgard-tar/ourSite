@@ -3,10 +3,10 @@ const Dotenv = require('dotenv-webpack')
 
 module.exports = env => ({
   mode: env.mode,
-  entry: './src/index.js',
+  entry: './app/app.jsx',
   output: {
     filename: 'app.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
   },
   module: {
     rules: [
@@ -29,12 +29,12 @@ module.exports = env => ({
         ],
       },
       {
-        test: /\.m?js$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
       },
@@ -51,7 +51,7 @@ module.exports = env => ({
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'public'),
     },
     compress: true,
     port: 9000,
