@@ -2,3 +2,5 @@ node_modules/
 package-lock.json
 dist/*.js
 dist/*.txt
+.env.development
+.env.production
