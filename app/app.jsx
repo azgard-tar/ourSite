@@ -1,6 +1,6 @@
-const ReactDOM = require("react-dom/client");
-const React = require("react");
-const CssDoodle = require("./components/css-doodle/index.jsx");
+import ReactDOM from "react-dom/client";
+import React from "react";
+import CssDoodle from "./components/css-doodle/index.jsx";
 
 const firstDoodleRules = `
   @use: var(--firstPartVariables);
@@ -15,7 +15,7 @@ ReactDOM.createRoot(
   document.getElementById("app")
 )
 .render(
-  <div class="container">
+  <div className="container">
     <CssDoodle rules={firstDoodleRules} />
     <CssDoodle rules={secondDoodleRules} />
   </div>

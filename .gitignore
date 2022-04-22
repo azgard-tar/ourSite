@@ -1,6 +1,6 @@
 node_modules/
 package-lock.json
-dist/*.js
-dist/*.txt
+public/*.js
+public/*.txt
 .env.development
 .env.production

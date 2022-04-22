@@ -1,4 +1,4 @@
-const React = require("react");
+import React from "react";
 import 'css-doodle';
 import './css-doodle.css';
   
@@ -11,4 +11,4 @@ class CssDoodle extends React.Component {
     }
 }
   
-module.exports = CssDoodle;
+export default CssDoodle;
