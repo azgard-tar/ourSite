@@ -1,0 +1,34 @@
+html, body, #app {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: linear-gradient(235deg, #faebd7, #ffc0cb);
+  background-size: 400% 400%;
+  margin: 0;
+
+  -webkit-animation: BgAnimation 8s ease infinite;
+  -moz-animation: BgAnimation 8s ease infinite;
+  animation: BgAnimation 8s ease infinite;
+}
+
+@-webkit-keyframes BgAnimation {
+  0%{background-position:0% 57%}
+  50%{background-position:100% 44%}
+  100%{background-position:0% 57%}
+}
+@-moz-keyframes BgAnimation {
+  0%{background-position:0% 57%}
+  50%{background-position:100% 44%}
+  100%{background-position:0% 57%}
+}
+@keyframes BgAnimation {
+  0%{background-position:0% 57%}
+  50%{background-position:100% 44%}
+  100%{background-position:0% 57%}
+}
+
+#app {
+  display: flex;
+  align-items: center;
+}

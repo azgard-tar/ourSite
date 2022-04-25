@@ -1,6 +1,7 @@
 import ReactDOM from "react-dom/client";
 import React from "react";
 import CssDoodle from "./components/css-doodle/index.jsx";
+import './app.scss';
 
 const firstDoodleRules = `
   @use: var(--firstPartVariables);
@@ -15,7 +16,7 @@ ReactDOM.createRoot(
   document.getElementById("app")
 )
 .render(
-  <div className="container">
+  <div className="doodleContainer">
     <CssDoodle rules={firstDoodleRules} />
     <CssDoodle rules={secondDoodleRules} />
   </div>

@@ -1,33 +1,3 @@
-html, body, #app {
-  width: 100%;
-  height: 100%;
-}
-body {
-  background: linear-gradient(235deg, #faebd7, #ffc0cb);
-  background-size: 400% 400%;
-  margin: 0;
-
-  -webkit-animation: BgAnimation 8s ease infinite;
-  -moz-animation: BgAnimation 8s ease infinite;
-  animation: BgAnimation 8s ease infinite;
-}
-
-@-webkit-keyframes BgAnimation {
-  0%{background-position:0% 57%}
-  50%{background-position:100% 44%}
-  100%{background-position:0% 57%}
-}
-@-moz-keyframes BgAnimation {
-  0%{background-position:0% 57%}
-  50%{background-position:100% 44%}
-  100%{background-position:0% 57%}
-}
-@keyframes BgAnimation {
-  0%{background-position:0% 57%}
-  50%{background-position:100% 44%}
-  100%{background-position:0% 57%}
-}
-
 :root {
   --n: 15;
   --width: 1280;
@@ -53,15 +23,12 @@ body {
     transform: translateX(calc(@var(--secondPartTransition) * 1px));
   );
 }
-#app {
-  display: flex;
-  align-items: center;
-}
-div.container {
+div.doodleContainer {
   width: 100%;
   display: flex;
   animation: 2s cubic-bezier(0.55, 0.01, 0.58, 1) 0s 1 showHideElement;
   justify-content: space-between;
+  position: absolute;
   --firstPartTransition: 640;
   --secondPartTransition: -640;
 }
