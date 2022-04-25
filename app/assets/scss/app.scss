@@ -1,7 +1,16 @@
-html, body, #app {
+@import './bootstrapImport.scss';
+
+html, body, #app, .fullHeightWidth {
   width: 100%;
   height: 100%;
 }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: linear-gradient(235deg, #faebd7, #ffc0cb);
   background-size: 400% 400%;
@@ -28,7 +37,6 @@ body {
   100%{background-position:0% 57%}
 }
 
-#app {
-  display: flex;
-  align-items: center;
+.mainContainer {
+  margin: 0 auto !important;
 }
