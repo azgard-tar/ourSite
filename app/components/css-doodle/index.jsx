@@ -1,6 +1,6 @@
 import React from "react";
 import 'css-doodle';
-import './css-doodle.css';
+import './index.css';
   
 class CssDoodle extends React.Component {
     constructor(props){

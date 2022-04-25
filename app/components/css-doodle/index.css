@@ -23,17 +23,3 @@
     transform: translateX(calc(@var(--secondPartTransition) * 1px));
   );
 }
-div.doodleContainer {
-  width: 100%;
-  display: flex;
-  animation: 2s cubic-bezier(0.55, 0.01, 0.58, 1) 0s 1 showHideElement;
-  justify-content: space-between;
-  position: absolute;
-  --firstPartTransition: 640;
-  --secondPartTransition: -640;
-}
-
-@keyframes showHideElement {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}

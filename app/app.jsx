@@ -1,23 +1,15 @@
 import ReactDOM from "react-dom/client";
 import React from "react";
-import CssDoodle from "./components/css-doodle/index.jsx";
-import './app.scss';
-
-const firstDoodleRules = `
-  @use: var(--firstPartVariables);
-  @use: var(--rule);
-`;
-const secondDoodleRules = `
-  @use: var(--secondPartVariables);
-  @use: var(--rule);
-`;
+import Background from "./components/background/index.jsx";
+import Wrapper from "./components/wrapper/index.jsx";
+import './assets/scss/app.scss';
 
 ReactDOM.createRoot(
   document.getElementById("app")
 )
 .render(
-  <div className="doodleContainer">
-    <CssDoodle rules={firstDoodleRules} />
-    <CssDoodle rules={secondDoodleRules} />
+  <div className="mainContainer p-0 d-flex align-items-center fullHeightWidth flex-column">
+    <Background />
+    <Wrapper />
   </div>
 );
