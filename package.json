@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/azgard-tar/ourSite#readme",
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "css-doodle": "^0.26.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
@@ -33,9 +34,11 @@
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "autoprefixer": "^10.4.5",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "dotenv-webpack": "^7.1.0",
+    "postcss-loader": "^6.2.1",
     "sass": "^1.50.1",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",

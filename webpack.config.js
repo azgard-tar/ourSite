@@ -12,18 +12,18 @@ module.exports = env => ({
     rules: [
       {
         test: /\.(css)$/,
-        use: ['style-loader','css-loader']
+        use: ['style-loader','css-loader', 'postcss-loader']
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
-          "style-loader",
-          "css-loader",
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
-              // Prefer `dart-sass`
-              implementation: require.resolve("sass"),
+              implementation: require.resolve('sass'),
             },
           },
         ],
@@ -40,7 +40,7 @@ module.exports = env => ({
       },
       {
         test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-        type: "asset",
+        type: 'asset',
       },
     ],
   },
