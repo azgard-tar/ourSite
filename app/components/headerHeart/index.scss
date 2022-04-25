@@ -17,6 +17,7 @@ $animationCount: 1;
   width: $size;
   height: $size;
   overflow: visible;
+  margin-left: math.div($size, 2);
   
   &__group {
     transform-origin: 0 $svgSize;
@@ -52,9 +53,9 @@ $animationCount: 1;
     stroke-dashoffset: $heartLen;
     animation: heart-anim $totalAnim $delay $animationCount forwards;
   }
-  &:hover {
+  &_heartbeat {
     transform-origin: 0 0;
-    animation: heart-hover-anim .5s infinite alternate;
+    animation: heartbeat-anim .5s infinite alternate;
   }
 }
 @keyframes square-anim {
@@ -159,7 +160,7 @@ $animationCount: 1;
     fill: $heartColor;
   }
 }
-@keyframes heart-hover-anim {
+@keyframes heartbeat-anim {
   to { 
     transform: scale(1.2);
   }
