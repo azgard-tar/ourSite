@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/azgard-tar/ourSite#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
     "bootstrap": "^5.1.3",
     "css-doodle": "^0.26.4",
     "react": "^18.0.0",
