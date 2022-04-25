@@ -10,6 +10,7 @@ $circleLen: 188.522;
 $heartLen: 308.522;
 $svgSize: 90px;
 $circleW: 60px;
+$animationCount: 1;
 
 .heart-loader {
   display: block;
@@ -19,14 +20,14 @@ $circleW: 60px;
   
   &__group {
     transform-origin: 0 $svgSize;
-    animation: group-anim $totalAnim $delay 1;
+    animation: group-anim $totalAnim $delay $animationCount forwards;
   }
   
   &__square {
     stroke: $strokeColor;
     stroke-dasharray: $squareLen, $squareLen;
     stroke-dashoffset: $squareLen;
-    animation: square-anim $totalAnim $delay 1;
+    animation: square-anim $totalAnim $delay $animationCount;
   }
   
   &__circle {
@@ -36,11 +37,11 @@ $circleW: 60px;
     transform-origin: $circleW math.div($circleW, 2);
     
     &.m--left {
-      animation: left-circle-anim $totalAnim $delay 1;
+      animation: left-circle-anim $totalAnim $delay $animationCount;
     }
     
     &.m--right {
-      animation: right-circle-anim $totalAnim $delay 1;
+      animation: right-circle-anim $totalAnim $delay $animationCount;
     }
   }
   
@@ -49,7 +50,11 @@ $circleW: 60px;
     fill: transparent;
     stroke-dasharray: $heartLen, $heartLen;
     stroke-dashoffset: $heartLen;
-    animation: heart-anim $totalAnim $delay 1;
+    animation: heart-anim $totalAnim $delay $animationCount forwards;
+  }
+  &:hover {
+    transform-origin: 0 0;
+    animation: heart-hover-anim .5s infinite alternate;
   }
 }
 @keyframes square-anim {
@@ -132,17 +137,8 @@ $circleW: 60px;
   54% {
     transform: rotate(-45deg);
   }
-  90% {
-    transform: rotate(-45deg);
-    opacity: 1;
-  }
-  97% {
-    transform: rotate(-45deg);
-    opacity: 0;
-  }
   100% {
     transform: rotate(-45deg);
-    opacity: 0;
   }
 }
 @keyframes heart-anim {
@@ -161,5 +157,10 @@ $circleW: 60px;
   100% {
     stroke-dashoffset: 0;
     fill: $heartColor;
+  }
+}
+@keyframes heart-hover-anim {
+  to { 
+    transform: scale(1.2);
   }
 }
