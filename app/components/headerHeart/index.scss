@@ -17,7 +17,7 @@ $animationCount: 1;
   width: $size;
   height: $size;
   overflow: visible;
-  margin-left: math.div($size, 2);
+  margin-left: $size;
   
   &__group {
     transform-origin: 0 $svgSize;
