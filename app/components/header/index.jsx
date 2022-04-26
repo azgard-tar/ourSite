@@ -1,6 +1,6 @@
-import React from 'react';
-import HeaderHeart from '../headerHeart/index.jsx';
-import HeaderNav from '../headerNav/index.jsx';
+import React, {lazy} from 'react';
+const HeaderNav = lazy(() => import('../headerNav/index.jsx'));
+const HeaderHeart = lazy(() => import('../headerHeart/index.jsx'));
 import './index.scss';
 
 class Header extends React.Component {

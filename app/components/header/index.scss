@@ -1,4 +1,4 @@
-@import '/app/assets/scss/mixins/flex.scss';
+@use '/app/assets/scss/mixins/flex.scss' as *;
 
 .header {
   &_wrapper {
