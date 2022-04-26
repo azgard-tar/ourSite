@@ -12,7 +12,7 @@ module.exports = env => ({
   devtool: (env.mode === devMode) ? 'inline-source-map' : false,
   entry: './app/app.jsx',
   output: {
-    filename: 'app.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'public'),
   },
   module: {
@@ -64,6 +64,9 @@ module.exports = env => ({
         terserOptions: {},
       }),
     ],
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new Dotenv({
