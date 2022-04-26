@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --env mode=production",
+    "build": "webpack --env mode=production && purgecss --css public/main.css --content public/index.html public/app.js --output public/main.css",
     "dev": "webpack-dev-server --env mode=development"
   },
   "repository": {
