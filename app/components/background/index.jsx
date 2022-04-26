@@ -1,12 +1,15 @@
 import React from "react";
 import CssDoodle from "../css-doodle/index.jsx";
+import backgroundImage from './img/ourPhoto.jpg';
 import './index.scss';
   
 const firstDoodleRules = `
+  background-image: url(${backgroundImage});
   @use: var(--firstPartVariables);
   @use: var(--rule);
 `;
 const secondDoodleRules = `
+  background-image: url(${backgroundImage});
   @use: var(--secondPartVariables);
   @use: var(--rule);
 `;
