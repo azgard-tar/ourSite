@@ -1,8 +1,12 @@
 div.doodleContainer {
   animation: 2s cubic-bezier(0.55, 0.01, 0.58, 1) 0s 1 showHideElement;
   position: absolute;
-  transform: scale(0.7);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(0.7);
   z-index: -1;
+  width: 1920px;
+  height: 961px;
   --firstPartTransition: 640;
   --secondPartTransition: -640;
 }
