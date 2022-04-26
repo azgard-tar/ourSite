@@ -1,5 +1,6 @@
 @import './bootstrapImport.scss';
 @import './customClasses.scss';
+@import './mixins/flex.scss';
 
 html, body, #app, .fullHeightWidth {
   width: 100%;
