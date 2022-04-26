@@ -1,8 +1,15 @@
 const path = require('path');
-const Dotenv = require('dotenv-webpack')
+const Dotenv = require('dotenv-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
+
+const devMode = 'development';
 
 module.exports = env => ({
   mode: env.mode,
+  devtool: (env.mode === devMode) ? 'inline-source-map' : false,
   entry: './app/app.jsx',
   output: {
     filename: 'app.js',
@@ -12,12 +19,16 @@ module.exports = env => ({
     rules: [
       {
         test: /\.(css)$/,
-        use: ['style-loader','css-loader', 'postcss-loader']
+        use: [
+          env.mode === devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader', 
+          'postcss-loader'
+        ]
       },
       {
         test: /\.s[ac]ss$/i,
         use: [
-          'style-loader',
+          env.mode === devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           {
@@ -44,11 +55,26 @@ module.exports = env => ({
       },
     ],
   },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      `...`,
+      new CssMinimizerPlugin(),
+      new TerserPlugin({
+        parallel: true,
+        terserOptions: {},
+      }),
+    ],
+  },
   plugins: [
     new Dotenv({
       path: `./.env.${env.mode}`
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Our site',
+      template: 'app/index.html'
     })
-  ],
+  ].concat(env.mode === devMode ? [] : [new MiniCssExtractPlugin()]),
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),

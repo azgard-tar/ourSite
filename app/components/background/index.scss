@@ -1,4 +1,4 @@
-@import '/app/assets/scss/app.scss';
+@use '/app/assets/scss/bootstrapImport.scss' as *; 
 
 .doodleContainer {
   --width: 1280;

@@ -2,7 +2,7 @@ import ReactDOM from "react-dom/client";
 import React from "react";
 import Background from "./components/background/index.jsx";
 import Wrapper from "./components/wrapper/index.jsx";
-import './assets/scss/app.scss';
+import "./assets/scss/app.scss";
 
 ReactDOM.createRoot(
   document.getElementById("app")
