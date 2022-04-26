@@ -1,14 +1,21 @@
-div.doodleContainer {
+@import '/app/assets/scss/app.scss';
+
+.doodleContainer {
+  --width: 1280;
+  --height: 961;
   animation: 2s cubic-bezier(0.55, 0.01, 0.58, 1) 0s 1 showHideElement;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%) scale(0.7);
   z-index: -1;
-  width: 1920px;
-  height: 961px;
-  --firstPartTransition: 640;
-  --secondPartTransition: -640;
+  width: calc(var(--width)*2 * 1px); 
+  height: calc(var(--height)*2 * 1px);
+
+  @include media-breakpoint-down(lg) {
+    --width: 640;
+    --height: 480.5;
+  }
 }
 
 @keyframes showHideElement {

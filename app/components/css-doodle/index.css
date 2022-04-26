@@ -1,10 +1,8 @@
 :root {
   --n: 15;
-  --width: 1280;
-  --height: 961;
   --rule: (
     :doodle {
-      @grid: 15 / 640px 961px;
+      @grid: var(--n) / calc((@var(--width) / 2) * 1px) calc(@var(--height) * 1px);
     }
     transition: transform .5s cubic-bezier(.175, .885, .32, 1.275);
     transition-delay: @rand(500ms);
@@ -16,10 +14,10 @@
   );
   --firstPartVariables: (
     --part: 0;
-    transform: translateX(calc(@var(--firstPartTransition) * 1px));
+    transform: translateX(calc(@var(--width) / 2 * 1px));
   );
   --secondPartVariables: (
     --part: 1;
-    transform: translateX(calc(@var(--secondPartTransition) * 1px));
+    transform: translateX(calc(@var(--width) / 2 * -1 * 1px));
   );
 }
