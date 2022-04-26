@@ -1,6 +1,7 @@
 import React from 'react';
 import HeaderHeart from '../headerHeart/index.jsx';
 import HeaderNav from '../headerNav/index.jsx';
+import './index.scss';
 
 class Header extends React.Component {
   constructor(props) {

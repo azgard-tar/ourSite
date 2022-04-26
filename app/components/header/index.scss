@@ -1,0 +1,11 @@
+@import '/app/assets/scss/mixins/flex.scss';
+
+.header {
+  &_wrapper {
+    @include flex-center();
+    flex-direction: column;
+    position: relative;
+    width: 450px;
+    margin-bottom: 20px;
+  }
+}
