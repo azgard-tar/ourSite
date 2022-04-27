@@ -19,9 +19,11 @@ export default class Background extends React.Component {
   }
   render() {
     return  (
-      <div className="doodleContainer d-flex align-items-center justify-content-between">
-        <CssDoodle rules={firstDoodleRules}/>
-        <CssDoodle rules={secondDoodleRules}/>
+      <div className="fullPageContainer">
+        <div className="doodleContainer d-flex align-items-center justify-content-between">
+          <CssDoodle rules={firstDoodleRules}/>
+          <CssDoodle rules={secondDoodleRules}/>
+        </div>
       </div>
     )
   }

@@ -4,8 +4,8 @@
     :doodle {
       @grid: var(--n) / calc((@var(--width) / 2) * 1px) calc(@var(--height) * 1px);
     }
-    transition: transform .5s cubic-bezier(.175, .885, .32, 1.275);
-    transition-delay: @rand(500ms);
+    transition: transform 2s cubic-bezier(.175, .885, .32, 1.275);
+    transition-delay: @rand(2000ms);
 
     background-position: calc(((@x - 1) * (@var(--width)/2)/@var(--n) + (@var(--width)/2*@var(--part))) * -1 * 1px) calc((@y - 1) * @var(--height)/@var(--n) * -1 * 1px);
     background-size: calc(@var(--width) * 1px) calc(@var(--height) * 1px);

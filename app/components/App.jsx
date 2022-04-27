@@ -12,7 +12,7 @@ class HeaderNav extends React.Component {
     return (
       <div className="mainContainer p-0 d-flex align-items-center fullHeightWidth flex-column">
         <Suspense fallback={<div>Page is Loading...</div>}>
-          <section>
+          <section className="fullHeightWidth">
             <Background />
             <Wrapper />
           </section>

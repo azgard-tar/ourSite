@@ -1,4 +1,10 @@
-@use '/app/assets/scss/bootstrapImport.scss' as *; 
+@use '/app/assets/scss/bootstrapImport.scss' as *;
+
+.fullPageContainer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
 
 .doodleContainer {
   --width: 1280;
@@ -15,6 +21,10 @@
   @include media-breakpoint-down(lg) {
     --width: 640;
     --height: 480.5;
+  }
+  @include media-breakpoint-down(sm) {
+    --width: 426.6;
+    --height: 320.3;
   }
 }
 
