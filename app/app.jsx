@@ -1,10 +1,10 @@
-import ReactDOM from "react-dom/client";
-import App from "./components/App.jsx";
+import ReactDom from "react-dom/client";
+import Router from "./routes/Router.jsx";
 import React from "react";
 
-ReactDOM.createRoot(
+ReactDom.createRoot(
   document.getElementById("app")
 )
 .render(
-  <App />
+  <Router />
 );

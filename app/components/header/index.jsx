@@ -1,4 +1,4 @@
-import React, {lazy} from 'react';
+import React, { lazy } from 'react';
 const HeaderNav = lazy(() => import('../headerNav/index.jsx'));
 const HeaderHeart = lazy(() => import('../headerHeart/index.jsx'));
 import './index.scss';
