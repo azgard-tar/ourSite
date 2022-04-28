@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class Values extends React.Component {
-  render() {
-    return (
-      <h2>Values</h2>
-    )
-  }
+export default function Values(props) {
+  return (
+    <div className="d-flex align-items-center flex-column">
+      <h2 className="mb-5">Наши ценности</h2>
+    </div>
+  )
 }

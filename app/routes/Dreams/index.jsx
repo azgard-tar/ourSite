@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class Dreams extends React.Component {
-  render() {
-    return (
-      <h2>Dreams</h2>
-    )
-  }
+export default function Dreams(props) {
+  return (
+    <div className="d-flex align-items-center flex-column">
+      <h2 className="mb-5">Заветные мечты</h2>
+    </div>
+  )
 }

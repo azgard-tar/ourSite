@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class Relatives extends React.Component {
-  render() {
-    return (
-      <h2>Relatives</h2>
-    )
-  }
+export default function Relatives(props) {
+  return (
+    <div className="d-flex align-items-center flex-column">
+      <h2 className="mb-5">Любимые родственники</h2>
+    </div>
+  )
 }
