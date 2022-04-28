@@ -21,7 +21,7 @@ export default function Folder(props) {
     }
   }
   return (
-    <div className="card mx-2 mb-0">
+    <div className="card mx-2 mb-md-0 mb-2">
       <img className="card-img-top" src={images[0]} alt="Folder image"/>
       <div className="card-footer">
         <small className="text-muted">{ start } - { end }</small>
