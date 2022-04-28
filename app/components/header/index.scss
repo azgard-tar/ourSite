@@ -5,7 +5,8 @@
     @include flex-center();
     flex-direction: column;
     position: relative;
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
     padding-bottom: 20px;
   }
 }
