@@ -20,6 +20,7 @@ export default function Header(props) {
       <div 
         className="header_wrapper"
         onMouseEnter={() => setDisplayStatus(true)}
+        onClick={() => setDisplayStatus(!isDisplayed)}
         onMouseLeave={() => setDisplayStatus(false)}
       >
         <HeaderHeart isNavDisplayed={isDisplayed}/>
