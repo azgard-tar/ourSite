@@ -1,6 +1,6 @@
 import React from "react";
 import CssDoodle from "../css-doodle/index.jsx";
-import backgroundImage from './img/ourPhoto.jpg';
+import backgroundImage from './img/ourPhoto.png';
 import './index.scss';
   
 const firstDoodleRules = `
